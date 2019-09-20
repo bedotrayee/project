@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./t2.component.css']
 })
 export class T2Component implements OnInit {
-  public emp=[{ "a": "ram", "b": "5000","c":"0"},];
+  
+ 
   constructor() { }
 
   ngOnInit() {
   }
+replace(){
+}
+del()
+{
+localStorage.clear();
 
+}
+p=localStorage.getItem('name');
 }

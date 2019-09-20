@@ -5,7 +5,7 @@ import { AppRoutingModule,routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { T1Component } from './t1/t1.component';
 import { T2Component } from './t2/t2.component';
-//import { ModalModule } from './modal';
+ 
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { T2Component } from './t2/t2.component';
     T1Component,
     T2Component,
     routingComponents,
-   // ModalModule,
+    
   ],
   imports: [
     BrowserModule,
