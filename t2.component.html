@@ -1,0 +1,81 @@
+<p>t2 works!</p>
+ 
+<div class=container>
+<table>
+<tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Contact</th>
+    <th>options</th>
+</tr>
+<tr>
+      <td>{{arr[0].name}}</td>
+    <td>{{arr[0].address}}</td>
+    <td>{{arr[0].contact}}</td>
+    <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#m1">Edit</button> <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#m2">Delete</button></td>
+    
+  </tr>
+
+
+
+</table>
+</div>
+
+  <div id="m2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+           
+        </div>
+        <div class="modal-body">
+          <p>Are you sure?</p>
+          <button type="submit"(click)="del()"data-dismiss="modal">Yes</button>
+          
+          <button type="submit" data-dismiss="modal">No</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="m1" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+            <div class="container" style="border:2px solid black">
+              <form #userForm="ngForm" (onclick)="register(data)">
+                <div class="form-group">
+             <label>Name:</label>
+             <input type="text"name="name"class="form-control"placeholder="hi"[(ngModel)]="name">
+                </div><br>
+                <div class="form-group">
+                  <label>Address:</label>
+                  <input type="text"name="address"class="form-control"[(ngModel)]="address">
+                     </div><br>
+                     <div class="form-group">
+                      <label>Contact:</label>
+                      <input type="text"name="contact"class="form-control"[(ngModel)]="contact">
+                         </div><br><br>
+                         <button class="btn btn-primary"type="submit">Edit</button>
+              </form>
+              </div>
+              
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+     
+    
+   
